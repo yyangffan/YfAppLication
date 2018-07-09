@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.superc.mine.R;
@@ -23,6 +25,7 @@ import com.youth.banner.Transformer;
 import com.youth.banner.listener.OnBannerListener;
 import com.youth.banner.loader.ImageLoader;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,10 +42,14 @@ public class HomeFragment extends BaseFragment {
     LinearLayout mHomeSearchLl;
     @BindView(R.id.home_banner)
     Banner mHomeBanner;
+    @BindView(R.id.home_tv_test)
+    TextView mHomeTvTest;
 
     private boolean isBig;
     private List<String> mStringList;
     private List<String> titles;
+
+    private static final String TAG = "HomeFragment";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -61,7 +68,7 @@ public class HomeFragment extends BaseFragment {
     }
 
 
-    @OnClick({R.id.home_search_imgv})
+    @OnClick({R.id.home_search_imgv,R.id.home_tv_test})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.home_search_imgv:
@@ -72,10 +79,14 @@ public class HomeFragment extends BaseFragment {
                 }
                 isBig = !isBig;
                 break;
+            case R.id.home_tv_test:
+                Toast.makeText(this.getActivity(), new DecimalFormat("0.00").format(1.156), Toast.LENGTH_LONG).show();
+                break;
         }
     }
+
     /*初始化轮播图Bannaer https://github.com/youth5201314/banner*/
-    public void  initBanner(){
+    public void initBanner() {
         mStringList.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529997035&di=cdc8f7cb17e70ff510c83685c0493eaa&imgtype=jpg&er=" +
                 "1&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F03087bf40ad162d9a62a929b1ddfa9ec8b13cd75.jpg");
         mStringList.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529997212&di=f46b6b10e323b914238123c937fd48e8&imgtype=jpg&er=1&s" +
@@ -126,7 +137,6 @@ public class HomeFragment extends BaseFragment {
         // 开始表演
         TransitionManager.beginDelayedTransition(view, mSet);
     }
-
 
     public class GlideImageLoader extends ImageLoader {
         @Override
