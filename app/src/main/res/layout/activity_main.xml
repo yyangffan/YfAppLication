@@ -1,0 +1,65 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_ee"
+    tools:context="com.superc.mine.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/main_rg"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/main_rb_one"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center|bottom"
+            android:text="你好啊"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_bigger_size"
+            />
+
+        <RadioButton
+            android:id="@+id/main_rb_two"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center|bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="亲爱的"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_normal_size"
+            />
+
+        <RadioButton
+            android:id="@+id/main_rb_three"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center|bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="嘿嘿嘿"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_normal_size"
+            />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

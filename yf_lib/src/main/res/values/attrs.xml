@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义TitlBar的自定义属性，所有属性的使用介绍在TitleBar中有-->
+    <declare-styleable name="mytitle">
+        <attr name="title_bar_color" format="color"/>
+        <attr name="title" format="string"/>
+        <attr name="title_size" format="integer"/>
+        <attr name="left_img" format="reference"/>
+        <attr name="right_img" format="reference"/>
+        <attr name="left_text" format="string"/>
+        <attr name="right_text" format="string"/>
+        <attr name="other_size" format="integer"/>
+
+    </declare-styleable>
+</resources>

@@ -1,0 +1,124 @@
+
+/**
+*这个是对与这个包下的使用示例说明--最后有附上布局的使用
+*/
+------------------------------------------------------------------------------------------------------------------------------
+public class MainActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
+    /*tab图标集合*/
+    private final int ICONS_RES[][] = {{R.drawable.sy1, R.drawable.sy2},{R.drawable.yh1, R.drawable.yh2},
+            {R.drawable.xq1, R.drawable.xq2}, {R.drawable.gj1, R.drawable.gj2},{R.drawable.dd1, R.drawable.dd2}};
+
+    /*tab 颜色值*/
+    private final int[] TAB_COLORS = new int[]{R.color.gray_nine,R.color.blue_bot};
+    private Fragment[] fragments = null;
+    private HomeFragment mHomeFragment;
+    private UserFragment mUserFragment;
+    private VillageFragment mVillageFragment;
+    private PropertyFragment mPropertyFragment;
+    private ShopFragment mShopFragment;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        setSlideable(false);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+    }
+
+    @Override
+    public void init() {
+        mHomeFragment = new HomeFragment();
+        mUserFragment = new UserFragment();
+        mVillageFragment = new VillageFragment();
+        mPropertyFragment = new PropertyFragment();
+        mShopFragment = new ShopFragment();
+        fragments = new Fragment[]{mHomeFragment, mUserFragment, mVillageFragment, mPropertyFragment, mShopFragment};
+        TabFragmentAdapter mAdapter = new TabFragmentAdapter(getSupportFragmentManager(), fragments);
+        ViewPager mPager = (ViewPager) findViewById(R.id.tab_pager);
+        //设置当前可见Item左右可见page数，次范围内不会被销毁
+        mPager.setOffscreenPageLimit(1);
+        mPager.setAdapter(mAdapter);
+        TabContainerView mTabLayout = (TabContainerView) findViewById(R.id.ll_tab_container);
+        mTabLayout.setOnPageChangeListener(this);
+        //最后的boolean是用来决定是否显示滑动时的渐变色效果，true-有  false-无(这个效果有些问题所有如果遇到了最好设为false)
+        mTabLayout.initContainer(getResources().getStringArray(R.array.tab_main_title), ICONS_RES, TAB_COLORS, true);
+        int width = getResources().getDimensionPixelSize(R.dimen.tab_icon_width);
+        int height = getResources().getDimensionPixelSize(R.dimen.tab_icon_height);
+        mTabLayout.setContainerLayout(R.layout.tab_container_view, R.id.iv_tab_icon, R.id.tv_tab_text, width, height);
+        mTabLayout.setViewPager(mPager);
+        mPager.setCurrentItem(getIntent().getIntExtra("tab", 0));
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        for (int index = 0, len = fragments.length; index < len; index++) {
+            fragments[index].onHiddenChanged(index != position);
+        }
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+
+    long stT = 0;
+    long endT = 0;
+    @Override
+    public void onBackPressed() {
+        stT = System.currentTimeMillis();
+        if (stT - endT >= 2000) {
+            showToast("双击退出");
+            endT = stT;
+            return;
+        }
+        super.onBackPressed();
+    }
+
+}
+----------------------------------------------------------------------------------------------------------------------------------
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_ee"
+    android:orientation="vertical"
+    tools:context="com.superc.shangjiaban.ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_ee"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tab_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"/>
+
+        <com.superc.shangjiaban.views.TabContainerView
+            android:id="@+id/ll_tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+

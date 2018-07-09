@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------
+    xml 中的使用
+    <ExpandTextView
+        android:id="@+id/item_fashion_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finshion_ll"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="14sp"
+        android:maxLines="3"
+    />
+
+----------------------------------------------------------------------------------------------------
+
+    代码中的设置
+    int whidth = ScreenUtils.getScreenWidth(mContext) - ScreenUtils.dip2px(mContext, 16 * 2);
+    expandTextView.initWidth(whidth);
+    expandTextView.setCloseText(content);

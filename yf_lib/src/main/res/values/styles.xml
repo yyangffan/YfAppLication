@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义密码输入框的属性-->
+    <declare-styleable name="PasswordInputView">
+        <attr name="pivBorderColor" format="color"/>
+        <attr name="pivBorderWidth" format="dimension"/>
+        <attr name="pivBorderRadius" format="dimension"/>
+        <attr name="pivPasswordColor" format="color"/>
+        <attr name="pivPasswordWidth" format="dimension"/>
+        <attr name="pivPasswordRadius" format="dimension"/>
+        <attr name="pivPasswordLength" format="integer"/>
+    </declare-styleable>
+    <!--日期时间选择框使用-->
+    <style name="time_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+</resources>

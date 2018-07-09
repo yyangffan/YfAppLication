@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/title_rela"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:background="#1983D1"
+    android:paddingTop="30dp">
+
+    <!-- 标题栏左侧功能区 -->
+
+    <ImageView
+        android:id="@+id/left_back_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_alignParentLeft="true"
+        android:minWidth="56dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/fh1"
+        android:visibility="visible"/>
+
+    <!-- 添加一个文本，让标题栏居中 -->
+    <RelativeLayout
+        android:id="@+id/center_zones"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="56dp"
+        android:layout_toRightOf="@id/left_back_image_view"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/title_text_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:text="未设置标题"
+            android:textColor="#fff"
+            android:textSize="22dp"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/title_ll_small"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/title_imgv_samll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/title_text_right"
+            android:paddingRight="3dp"
+            />
+
+        <TextView
+            android:id="@+id/title_text_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/title_imgv_big"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        />
+
+</RelativeLayout>

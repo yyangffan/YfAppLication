@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_small">3dp</dimen>
+    <dimen name="padding_normal">5dp</dimen>
+    <dimen name="padding_big">10dp</dimen>
+    <dimen name="padding_bigger">20dp</dimen>
+
+    <dimen name="txt_small_size">10sp</dimen>
+    <dimen name="txt_normal_size">14sp</dimen>
+    <dimen name="txt_big_size">18sp</dimen>
+    <dimen name="txt_bigger_size">24sp</dimen>
+
+    <dimen name="margin_normal">8dp</dimen>
+
+
+
+</resources>
