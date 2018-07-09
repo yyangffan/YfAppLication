@@ -1,7 +1,7 @@
 package com.superc.mine.bean;
 
 /**
- *提交一
+ *提交
  */
 
 public class Message {
