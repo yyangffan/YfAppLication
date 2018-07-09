@@ -1,7 +1,7 @@
 package com.superc.mine.bean;
 
 /**
- * Created by user on 2018/6/5.
+ *
  */
 
 public class Message {
