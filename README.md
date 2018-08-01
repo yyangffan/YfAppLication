@@ -12,3 +12,4 @@
 &emsp;dependencies {<br>
 &emsp;&emsp;&emsp;implementation 'com.github.yyangffan:YfAppLication:v1.0.0'<br>
 &emsp;}<br>
+<h5 color="#ff0000">如果studio版本不是最新就将implementation改成compile</h5>
