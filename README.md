@@ -21,3 +21,22 @@
 <h4>更新说明</h4>
 &emsp;&emsp;1.在项目的colors中添加main_color来控制标题栏颜色<br>
 &emsp;&emsp;2.BaseActivity中添加setUseTitle,如果设置false则不使用默认标题栏<br>
+
+
+<h3>问题记录</h3>
+因为使用到了沉浸式直接将标题栏设为透明需要设置如下：<br>
+1. 设置Manifest的主题为如下<br>
+&emsp;<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"><br>
+&emsp;<!-- Customize your theme here. --><br>
+&emsp;&emsp;<item name="colorPrimary">@color/colorPrimary</item><br>
+&emsp;&emsp;<item name="colorPrimaryDark">@color/colorPrimaryDark</item><br>
+&emsp;&emsp;<item name="colorAccent">@color/colorAccent</item><br>
+&emsp;&emsp;<item name="android:windowTranslucentStatus">true</item><br>
+&emsp;</style>
+2.如果要完成底部布局可上移需要如下设置：<br>
+在Manifest的Activity中添加<br>
+android:windowSoftInputMode="adjustResize|stateHidden"<br>
+还需要在该界面的顶部布局添加如下一个属性才可以:<br>
+android:fitsSystemWindows="true"<br>
+
+
