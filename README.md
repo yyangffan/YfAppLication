@@ -10,7 +10,7 @@
 &emsp;}<br>
 <h4>2.在项目工程中添加：</h4>
 &emsp;dependencies {<br>
-&emsp;&emsp;&emsp;implementation 'com.github.yyangffan:YfAppLication:v1.0.0'<br>
+&emsp;&emsp;&emsp;implementation 'com.github.yyangffan:YfAppLication:v1.0.1'<br>
 &emsp;}<br>
 如果studio版本不是最新就将implementation改成compile<br>
 <h4>3.目前使用到的依赖有</h4>
