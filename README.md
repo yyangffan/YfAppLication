@@ -13,7 +13,7 @@
 &emsp;&emsp;&emsp;implementation 'com.github.yyangffan:YfAppLication:v1.0.0'<br>
 &emsp;}<br>
 <h4>如果studio版本不是最新就将implementation改成compile</h4>
-<h4>目前使用到的依赖有</h4>
+<h4>3.目前使用到的依赖有</h4>
 &emsp;&emsp;compile 'com.yanzhenjie.nohttp:nohttp:1.1.9'<br>
 &emsp;&emsp;compile 'com.google.code.gson:gson:2.8.2'<br>
 &emsp;&emsp;compile 'org.greenrobot:eventbus:3.0.0'<br>
