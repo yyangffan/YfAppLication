@@ -1,6 +1,6 @@
 # YfAppLication
-自己的库用来方便开发
-使用方法：
+自己的库用来方便开发<br>
+使用方法：\<br>
 1.在主工程中添加：
   allprojects {
   		repositories {
