@@ -25,17 +25,17 @@
 
 <h3>问题记录</h3>
 因为使用到了沉浸式直接将标题栏设为透明需要设置如下：<br>
-1. 设置Manifest的主题为如下<br><br>
+1. 设置Manifest的主题为如下<br><h5>
 &emsp;<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"><br>
 &emsp;&emsp;&lt;item name=&quot;colorPrimary&quot;&gt;@color/colorPrimary&lt;/item&gt;<br>
 &emsp;&emsp;&lt;item name=&quot;colorPrimaryDark&quot;&gt;@color/colorPrimaryDark&lt;/item&gt;<br>
 &emsp;&emsp;&lt;item name=&quot;colorAccent&quot;&gt;@color/colorAccent&lt;/item&gt;<br>
 &emsp;&emsp;&lt;item name=&quot;android:windowTranslucentStatus&quot;&gt;true&lt;/item&gt;<br>
-&emsp;</style><br><br>
+&emsp;</style><br></h5>
 2.如果要完成底部布局可上移需要如下设置：<br>
 在Manifest的Activity中添加<br>
-android:windowSoftInputMode="adjustResize|stateHidden"<br>
+<h5>android:windowSoftInputMode="adjustResize|stateHidden"</h5>
 还需要在该界面的顶部布局添加如下一个属性才可以:<br>
-android:fitsSystemWindows="true"<br>
+<h5>android:fitsSystemWindows="true"</h5>
 
 
