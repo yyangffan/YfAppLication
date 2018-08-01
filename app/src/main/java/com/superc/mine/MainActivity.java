@@ -54,7 +54,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void init() {
-        configeSimpleTitle("主页", false);
+        setUser_titleBar(false);
         mFragments = new ArrayList<>();
         mRadioButtons = new ArrayList<>();
         mHomeFragment = new HomeFragment();

@@ -59,6 +59,15 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
         initListener();
     }
 
+    /**
+     * @param user_titleBar false-->不使用标题栏
+     */
+    public void setUser_titleBar(boolean user_titleBar) {
+        if(!user_titleBar){
+            findViewById(R.id.title_bar_container).setVisibility(View.GONE);
+        }
+    }
+
     /*界面绘制完成执行该方法*/
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
@@ -109,7 +118,6 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
                 }
             }
         });
-
     }
 
     /**
