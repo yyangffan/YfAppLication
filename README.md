@@ -18,3 +18,6 @@
 &emsp;&emsp;compile 'com.google.code.gson:gson:2.8.2'<br>
 &emsp;&emsp;compile 'org.greenrobot:eventbus:3.0.0'<br>
 &emsp;&emsp;compile 'com.wang.avi:library:2.1.3'<br>
+<h4>更新说明</h4>
+&emsp;&emsp;1.在项目的colors中添加main_color来控制标题栏颜色<br>
+&emsp;&emsp;2.BaseActivity中添加setUseTitle,如果设置false则不使用默认标题栏<br>
