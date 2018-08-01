@@ -2,7 +2,7 @@
 <h3>自己的库用来方便开发</h3><br>
 <h4>使用方法：</h4><br>
 1.在主工程中添加：<br>
-  &nbsp;&nbsp;&nbsp;allprojects {<br>
+  allprojects {<br>
   		repositories {<br>
 	  		...<br>
 	  		maven { url 'https://jitpack.io' }<br>
