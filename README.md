@@ -33,9 +33,9 @@
 &emsp;&emsp;&lt;item name=&quot;android:windowTranslucentStatus&quot;&gt;true&lt;/item&gt;<br>
 &emsp;</style><br></h5>
 2.如果要完成底部布局可上移需要如下设置：<br>
-在Manifest的Activity中添加<br>
+在Manifest的Activity中添加
 <h5>android:windowSoftInputMode="adjustResize|stateHidden"</h5>
-还需要在该界面的顶部布局添加如下一个属性才可以:<br>
+还需要在该界面的顶部布局添加如下一个属性才可以:
 <h5>android:fitsSystemWindows="true"</h5>
 
 
