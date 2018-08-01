@@ -7,11 +7,17 @@
     tools:context="com.superc.mine.ui.fragment.FashionFragment">
 
     <TextView
+        android:id="@+id/fashion_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="第三页"
-        android:textColor="@color/black"
-        android:textSize="20sp"/>
+        android:text="跳转"/>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
 </LinearLayout>

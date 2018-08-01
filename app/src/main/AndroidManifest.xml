@@ -19,7 +19,8 @@
         <activity
             android:name=".ui.activity.TwoActivity"
             android:launchMode="singleTask">
-
+        </activity>
+        <activity android:name=".ui.activity.TestActivity">
         </activity>
     </application>
 

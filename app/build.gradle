@@ -25,12 +25,14 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile project(':yf_lib')
+    // (必选)
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:support-v4:26.+'
-    testCompile 'junit:junit:4.12'
     compile 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    compile 'com.just.agentweb:agentweb:4.0.2'
     compile 'com.youth.banner:banner:1.4.10'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }

@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.superc.mine.R;
+import com.superc.mine.ui.activity.TestActivity;
 import com.superc.yf_lib.base.BaseFragment;
 import com.superc.yf_lib.utils.ToastUtil;
 import com.youth.banner.Banner;
@@ -81,6 +82,7 @@ public class HomeFragment extends BaseFragment {
                 break;
             case R.id.home_tv_test:
                 Toast.makeText(this.getActivity(), new DecimalFormat("0.00").format(1.156), Toast.LENGTH_LONG).show();
+                stActivity(TestActivity.class);
                 break;
         }
     }
