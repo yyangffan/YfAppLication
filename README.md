@@ -28,7 +28,7 @@
 1. 设置Manifest的主题为如下<br>
 &emsp;<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"><br>
 &emsp;<!-- Customize your theme here. --><br>
-&emsp;&emsp;""<item name="colorPrimary">@color/colorPrimary</item>""<br>
+&emsp;&emsp;```<item name="colorPrimary">@color/colorPrimary</item>```<br>
 &emsp;&emsp;<item name="colorPrimaryDark">@color/colorPrimaryDark</item><br>
 &emsp;&emsp;<item name="colorAccent">@color/colorAccent</item><br>
 &emsp;&emsp;<item name="android:windowTranslucentStatus">true</item><br>
