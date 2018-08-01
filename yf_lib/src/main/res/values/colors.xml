@@ -13,5 +13,6 @@
     <color name="text1">#1983D1</color>
     <color name="text2">#333333</color>
     <color name="split_line">#11112233</color>
+    <color name="main_color">#1983D1</color>
 
 </resources>

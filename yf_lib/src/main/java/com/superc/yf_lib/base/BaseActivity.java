@@ -58,6 +58,7 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
         mrela = (RelativeLayout) findViewById(R.id.title_rela);
         initListener();
     }
+
     /*界面绘制完成执行该方法*/
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
@@ -68,13 +69,12 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
     public abstract void init();
 
     /**
-     *
-     * @param title             标题名称
-     * @param showBack          是否显示back   true显示  false隐藏
-     * @param right_content     右侧展示的字
-     * @param sm_right_imgid    右侧展示的小图片--跟文字是一起的
-     * @param big_right_imgid   右侧展示的小图片--跟文字分离
-     * @param rightViewClick    点击右侧的监听事件  smclik  bigclik
+     * @param title           标题名称
+     * @param showBack        是否显示back   true显示  false隐藏
+     * @param right_content   右侧展示的字
+     * @param sm_right_imgid  右侧展示的小图片--跟文字是一起的
+     * @param big_right_imgid 右侧展示的小图片--跟文字分离
+     * @param rightViewClick  点击右侧的监听事件  smclik  bigclik
      */
 
     public void configTitle(Object title, boolean showBack, final Object right_content, int sm_right_imgid, int big_right_imgid,
@@ -114,22 +114,14 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
 
     /**
      * 初始化标题以及是否显示左侧返回
-     * @param title     左侧标题
-     * @param showBack  是否显示返回。
+     *
+     * @param title    左侧标题
+     * @param showBack 是否显示返回。
      */
-    public void configeSimpleTitle(Object title,boolean showBack) {
-        configTitle(title, showBack, "",0, 0, null);
+    public void configeSimpleTitle(Object title, boolean showBack) {
+        configTitle(title, showBack, "", 0, 0, null);
     }
-    /**
-     * @param color_id   标题的背景颜色
-     */
-    public void setTitleBackColor(int color_id) {
-        if(color_id!=0) {
-            mrela.setBackgroundColor(color_id);
-        }else {
-            ToastShow("不要这么玩");
-        }
-    }
+
 
     private void setContent(Object str, TextView tv) {
         if (str instanceof String) {
@@ -143,6 +135,7 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
             tv.setVisibility(str == null ? View.GONE : View.VISIBLE);
         }
     }
+
     private void initListener() {
         mimgv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -181,6 +174,7 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
             ToastUtil.showToast(this, (int) msg);
         }
     }
+
     /*加载Loading 如下两个*/
     public void showLoadPop() {
         mPopupWindow = new PopupWindow(LayoutInflater.from(this).inflate(R.layout.layout_load_popup, null),
@@ -191,15 +185,23 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
         mPopupWindow.setFocusable(true);
 
     }
+
     public void hideLoadPop() {
         if (mPopupWindow != null) {
             mPopupWindow.dismiss();
         }
     }
-    public abstract class OnRightViewClickListener {
-        public void OnSmallClickListener() {};
 
-        public void OnBigClickListener() {};
+    public abstract class OnRightViewClickListener {
+        public void OnSmallClickListener() {
+        }
+
+        ;
+
+        public void OnBigClickListener() {
+        }
+
+        ;
     }
 
 

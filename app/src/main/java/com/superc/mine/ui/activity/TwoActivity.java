@@ -17,7 +17,7 @@ public class TwoActivity extends BaseActivity {
 
     @Override
     public void init() {
-        simpleConfigeTitle("第二页", true);
+        configeSimpleTitle("第二页", true);
     }
 
     public void goMySelf(View v) {

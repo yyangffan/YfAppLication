@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="66dp"
-    android:background="#1983D1"
+    android:background="@color/main_color"
     android:paddingTop="30dp">
 
     <!-- 标题栏左侧功能区 -->
