@@ -28,11 +28,11 @@
 1. 设置Manifest的主题为如下<br>
 &emsp;<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"><br>
 &emsp;<!-- Customize your theme here. --><br>
-&emsp;&emsp;<item name="colorPrimary">@color/colorPrimary</item><br>
-&emsp;&emsp;<item name="colorPrimaryDark">@color/colorPrimaryDark</item><br>
-&emsp;&emsp;<item name="colorAccent">@color/colorAccent</item><br>
-&emsp;&emsp;<item name="android:windowTranslucentStatus">true</item><br>
-&emsp;</style>
+&lt;item name=&quot;colorPrimary&quot;&gt;@color/colorPrimary&lt;/item&gt;<br>
+&lt;item name=&quot;colorPrimaryDark&quot;&gt;@color/colorPrimaryDark&lt;/item&gt;<br>
+&lt;item name=&quot;colorAccent&quot;&gt;@color/colorAccent&lt;/item&gt;<br>
+&lt;item name=&quot;android:windowTranslucentStatus&quot;&gt;true&lt;/item&gt;<br>
+&emsp;</style><br>
 2.如果要完成底部布局可上移需要如下设置：<br>
 在Manifest的Activity中添加<br>
 android:windowSoftInputMode="adjustResize|stateHidden"<br>
