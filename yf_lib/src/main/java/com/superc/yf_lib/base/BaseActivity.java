@@ -117,7 +117,7 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
      * @param title     左侧标题
      * @param showBack  是否显示返回
      */
-    public void simpleConfigeTitle(Object title,boolean showBack) {
+    public void configeSimpleTitle(Object title,boolean showBack) {
         configTitle(title, showBack, "",0, 0, null);
     }
     /**
