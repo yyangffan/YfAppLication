@@ -26,13 +26,9 @@
 <h3>问题记录</h3>
 因为使用到了沉浸式直接将标题栏设为透明需要设置如下：<br>
 1. 设置Manifest的主题为如下<br>
-```java
 &emsp;<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"><br>
-```
 &emsp;<!-- Customize your theme here. --><br>
-```java
 &emsp;&emsp;<item name="colorPrimary">@color/colorPrimary</item><br>
-```
 &emsp;&emsp;<item name="colorPrimaryDark">@color/colorPrimaryDark</item><br>
 &emsp;&emsp;<item name="colorAccent">@color/colorAccent</item><br>
 &emsp;&emsp;<item name="android:windowTranslucentStatus">true</item><br>
