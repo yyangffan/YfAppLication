@@ -21,7 +21,7 @@ import com.superc.yf_lib.utils.ToastUtil;
 /********************************************************************
  @version: 1.0.0
  @description:集成了nohttp、Gson、ButterKnife、EventBus
- @author:呵呵
+ @author:呵呵。
  @time:2018/3/30、11:05
  @变更历史:如果要去掉右滑返回上一界面使用setSlideable(false);添加到setContentView(R.layout.xxxxx);下面
  ********************************************************************/
