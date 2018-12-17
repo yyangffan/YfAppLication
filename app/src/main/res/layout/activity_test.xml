@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/test_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_corner_tv"
+        android:gravity="center"
+        android:minWidth="20dp"
+        android:padding="3dp"
+        android:text="- -"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text=":"
+        app:layout_constraintBaseline_toBaselineOf="@+id/test_hour"
+        app:layout_constraintLeft_toRightOf="@+id/test_hour"/>
+
+    <TextView
+        android:id="@+id/test_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/shape_corner_tv"
+        android:gravity="center"
+        android:minWidth="20dp"
+        android:padding="3dp"
+        android:text="- -"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintLeft_toRightOf="@+id/textView"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text=":"
+        app:layout_constraintBaseline_toBaselineOf="@+id/test_minute"
+        app:layout_constraintLeft_toRightOf="@+id/test_minute"/>
+
+    <TextView
+        android:id="@+id/test_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/shape_corner_tv"
+        android:gravity="center"
+        android:minWidth="20dp"
+        android:padding="3dp"
+        android:text="- -"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"/>
+
+    <TextView
+        android:id="@+id/test_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:text="- -"
+        app:layout_constraintBaseline_toBaselineOf="@+id/test_second"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test_hour"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -6,18 +6,10 @@
     android:orientation="vertical"
     tools:context="com.superc.mine.ui.fragment.FashionFragment">
 
-    <TextView
-        android:id="@+id/fashion_test"
+    <com.superc.yf_lib.views.spec_view.NestedRecyclerView
+        android:id="@+id/fashion_recy"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="跳转"/>
-
-    <WebView
-        android:id="@+id/web_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="match_parent"
+        android:padding="10dp"/>
 
 </LinearLayout>

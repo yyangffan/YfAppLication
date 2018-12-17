@@ -26,7 +26,7 @@ public class Http {
     private Context mContext;
     private boolean isGet = false;//是否为get请求  true--get请求  false--post请求
     private static Http mInstance;
-    private boolean debug=true;
+    private boolean debug = true;
 
     private Http(Context context, boolean isGet) {
         mContext = context;
@@ -50,7 +50,7 @@ public class Http {
             request.add(entry.getKey(), entry.getValue());
             enter += (entry.getKey() + "=" + entry.getValue() + "&");
         }
-        if(debug) {
+        if (debug) {
             Log.i("访问接口及参数", url + "    " + (enter.length() != 1 ? url + enter.substring(0, enter.length() - 1) + "\n" : "无参数"));
         }
         mRequestQueue.add(2, request, new OnResponseListener<JSONObject>() {
@@ -64,7 +64,7 @@ public class Http {
                     T t = new Gson().fromJson(response.get().toString(), type);
                     backListener.callNetBack(t);
                     String[] split = url.split("/");
-                    if(debug) {
+                    if (debug) {
                         Log.e("访问:" + split[split.length - 2] + "/" + split[split.length - 1] + " 返回数据", "\n" + (response.get() != null ? response.get().toString() : "无返回数据"));
                     }
                 }
@@ -74,7 +74,10 @@ public class Http {
             public void onFailed(int what, Response<JSONObject> response) {
                 ToastUtil.showToast(mContext, "网络异常");
                 String[] split = url.split("/");
-                if(debug) {
+                if (backListener != null) {
+                    backListener.callFailBack(response.get().toString());
+                }
+                if (debug) {
                     Log.i("访问:" + split[split.length - 2] + "/" + split[split.length - 1] + " 接口时出错:", "\n" + (response.get() != null ? response.get().toString() : response.toString()));
                 }
             }
@@ -85,9 +88,11 @@ public class Http {
         });
     }
 
-    public interface CallNetBack<T> {
+    public static abstract class CallNetBack<T> {
         /* @param data  服务器返回内容*/
-        void callNetBack(T data);
+        public abstract void callNetBack(T data);
+
+        public abstract void callFailBack(String data);
     }
 
 
