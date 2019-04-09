@@ -72,7 +72,7 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        init();
+//        init();
     }
 
     public abstract void init();
