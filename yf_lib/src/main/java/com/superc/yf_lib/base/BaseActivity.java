@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.superc.yf_lib.R;
 import com.superc.yf_lib.slide.SlideBackActivity;
 import com.superc.yf_lib.utils.ToastUtil;
+import com.superc.yf_lib.utils.titlebar.TitleUtils;
 
 
 /********************************************************************
@@ -39,7 +40,10 @@ public abstract class BaseActivity extends SlideBackActivity implements View.OnC
 
     @Override
     public void setContentView(int layoutResID) {
+        TitleUtils.getStatusBarHeight(this);
         setContentView(LayoutInflater.from(this).inflate(layoutResID, null));
+        TitleUtils.setStatusBar(this, false, false);
+        TitleUtils.setStatusTextColor(true, this);
     }
 
     @Override
